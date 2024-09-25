@@ -11,14 +11,16 @@
 
 1. [Overview](#overview)
 2. [Module Description - What is the dotnet module?](#module-description)
-3. [Setup - The basics of getting started with dotnet](#setup)
+3. [Tasks - Inspect which version(s) of .NET are installed](#tasks)
+4. [Setup - The basics of getting started with dotnet](#setup)
     * [What dotnet affects](#what-dotnet-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with dotnet](#beginning-with-dotnet)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+
+5. [Usage - Configuration options and additional functionality](#usage)
+6. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+7. [Limitations - OS compatibility, etc.](#limitations)
+8. [Development - Guide for contributing to the module](#development)
 
 ## Overview
 
@@ -32,6 +34,14 @@ Puppet module for installing and managing [Microsoft .NET framework](http://www.
 
 This module installs and configures the Microsoft .NET framework on Windows
 systems. It support side-by-side installs where appropriate.
+
+## Tasks
+
+You can use the regcheck.rb task (located in the tasks folder) with Bolt to inspect which versions of .NET are installed on your servers. To run the task, use the following base command along with any additional options as necessary:
+
+```
+bolt script run regcheck.rb --nodes
+```
 
 ## Setup
 
